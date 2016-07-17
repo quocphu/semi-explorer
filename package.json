@@ -1,0 +1,24 @@
+{
+  "name": "semi-explorer",
+  "description": "postgres",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-bitcore-api"
+  },
+  "dependencies": {
+    "bitcore": "git://github.com/bitpay/bitcore.git#51c53b16ced6bcaf4b78329955d6814579fe4ee9",
+    "pg":"~5.0.0",
+    "socket.io": "1.0.6",
+    "socket.io-client": "1.0.6",
+    "express":"4.10.2",
+    "soop": "=0.1.5",
+    "buffertools": "*",
+    "async":"*",
+    "winston":"*",
+    "glob":"*",
+    "mkdirp":"*",
+    "pg":"4.4.0",
+    "bitcoinjs-lib":"~2.2.0",
+    "bs58check":"~1.0.8"
+  }  
+}
