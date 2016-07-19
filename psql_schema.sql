@@ -14,7 +14,7 @@ create table Txes(
 
 create table AddressVin(
 	address character(34),
-	related character(34),
+	related character(699),
 	txid character(64),
 	n integer,
 	amount numeric(19),
@@ -23,7 +23,7 @@ create table AddressVin(
 
 create table AddressVout(
 	address character(34),
-	related character(34),
+	related character(699),
 	txid character(64),
 	n integer,
 	amount numeric(19),
@@ -39,3 +39,7 @@ create index blocks_height_idx on Blocks(height);
 create index txes_txid_idx on Blocks(txid);
 create index txes_blockhash_idx on Blocks(blockhash);
 create index txes_blockheight_idx on Blocks(blockheight);
+
+
+create index addressvout_txid_idx on addressvout(txid);
+create index addressvin_txid_idx on addressvin(txid);
