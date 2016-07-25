@@ -25,8 +25,10 @@ if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
   port = '3000';
-  b_port = '9332';
-  p2p_port = '9333';
+  // b_port = '9332';
+  // p2p_port = '9333';
+  b_port = '8332';
+  p2p_port = '8333';
 } else {
   env = 'testnet';
   db = home + '/testnet';
@@ -69,12 +71,15 @@ var ignoreCache = process.env.INSIGHT_IGNORE_CACHE || 0;
 
 var bitcoindConf = {
   protocol: process.env.BITCOIND_PROTO || 'http',
-  user: process.env.BITCOIND_USER || 'litecoinrpc',
+  // user: process.env.BITCOIND_USER || 'litecoinrpc',
+  // pass: process.env.BITCOIND_PASS || 'Bb5aA6UMkGp8WQWziScu4aq37jDAy5ZigDFwfTNL8S9Z',
+  // host: process.env.BITCOIND_HOST || '192.168.1.222',
+   user: process.env.BITCOIND_USER || 'bitcoin',
   pass: process.env.BITCOIND_PASS || 'Bb5aA6UMkGp8WQWziScu4aq37jDAy5ZigDFwfTNL8S9Z',
-  host: process.env.BITCOIND_HOST || '192.168.1.222',
+  host: process.env.BITCOIND_HOST || '192.168.1.211',
   port: process.env.BITCOIND_PORT || b_port,
   p2pPort: process.env.BITCOIND_P2P_PORT || p2p_port,
-  p2pHost: process.env.BITCOIND_P2P_HOST || process.env.BITCOIND_HOST || '192.168.1.222',
+  p2pHost: process.env.BITCOIND_P2P_HOST || process.env.BITCOIND_HOST || '192.168.1.211',
   dataDir: dataDir,
   // DO NOT CHANGE THIS!
   disableAgent: true

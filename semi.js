@@ -13,7 +13,7 @@ var logger = require('./lib/logger').logger;
 var pg = require('pg');
 
 
-var conString = "postgres://postgres:1@localhost/litecoin";
+var conString = "postgres://postgres:1@localhost/bitcoin";
 
 pg.connect(conString, function(err, client, done) {
   if(err) {
@@ -22,7 +22,13 @@ pg.connect(conString, function(err, client, done) {
   }
   var startTime = new Date().getTime();
   var rpcSync = new RpcSync(null, client);
-  rpcSync.start();
+  var start = new Date().getTime();
+  rpcSync.start(null, function(err){
+    
+      var end = new Date().getTime();
+      console.log((end - start)/1000);
+    
+  });
 
 
 });
