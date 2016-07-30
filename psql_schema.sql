@@ -42,4 +42,17 @@ create index txes_blockheight_idx on txes(blockheight);
 
 
 create index addressvout_txid_idx on addressvout(txid);
+create index addressvout_address_idx on addressvout(address);
+
 create index addressvin_txid_idx on addressvin(txid);
+
+
+create table AddressVin(
+	txid character(64),
+	in_txid character(64),
+	in_n integer,
+	ts timestamp without time zone
+);
+
+create index addressvin_txid_idx on addressvin(txid);
+create index addressvin_txid_idx on addressvin(in_txid);

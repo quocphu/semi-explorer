@@ -3,6 +3,7 @@
 var path = require('path');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
+var networks = require('./networks.js');
 
 var rootPath = path.normalize(__dirname + '/..'),
   env,
@@ -124,4 +125,5 @@ module.exports = {
   safeConfirmations: safeConfirmations, // PLEASE NOTE THAT *FULL RESYNC* IS NEEDED TO CHANGE safeConfirmations
   ignoreCache: ignoreCache,
   forceRPCsync: forceRPCsync,
+  coin: networks.bitcoin
 };

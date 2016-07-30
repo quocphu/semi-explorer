@@ -19,6 +19,10 @@
     "mkdirp":"*",
     "pg":"4.4.0",
     "bitcoinjs-lib":"~2.2.0",
-    "bs58check":"~1.0.8"
+    "bs58check":"~1.0.8",
+    "buffer-compare": "^1.1.0",
+    "buffer-equals": "^1.0.3",
+    "buffer-reverse": "^1.0.0",
+    "typeforce": "^1.6.2"
   }  
 }

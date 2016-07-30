@@ -13,7 +13,7 @@ var logger = require('./lib/logger').logger;
 var pg = require('pg');
 
 
-var conString = "postgres://postgres:1@localhost/bitcoin";
+var conString = "postgres://postgres:1@localhost/btc";
 
 pg.connect(conString, function(err, client, done) {
   if(err) {
