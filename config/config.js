@@ -60,7 +60,8 @@ var isWin = /^win/.test(process.platform);
 var isMac = /^darwin/.test(process.platform);
 var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
-  if (isWin) dataDir = '%APPDATA%\\Bitcoin\\';
+  // if (isWin) dataDir = '%APPDATA%\\Bitcoin\\';
+  if (isWin) dataDir = 'D:\\block-bitcoin\\';
   if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Bitcoin/';
   if (isLinux) dataDir = process.env.HOME + '/.bitcoin/';
 }

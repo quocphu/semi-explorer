@@ -55,4 +55,4 @@ create table AddressVin(
 );
 
 create index addressvin_txid_idx on addressvin(txid);
-create index addressvin_txid_idx on addressvin(in_txid);
+create index addressvin_in_txid_idx on addressvin(in_txid);
