@@ -56,3 +56,15 @@ create table AddressVin(
 
 create index addressvin_txid_idx on addressvin(txid);
 create index addressvin_in_txid_idx on addressvin(in_txid);
+
+
+------ only address
+create table AddressVout(
+	address character(34),
+	related character(699),
+	txid character(64),
+	n integer,
+	amount numeric(19),
+	data jsonb,
+	ts timestamp without time zone
+);
