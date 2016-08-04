@@ -11,7 +11,7 @@ var FileSync = require('./lib/FileSync.js');
 var pg = require('pg');
 
 
-var conString = "postgres://postgres:1@localhost/address";
+var conString = "postgres://postgres:1@localhost/btc";
 
 pg.connect(conString, function(err, client, done) {
   if(err) {
@@ -24,7 +24,10 @@ pg.connect(conString, function(err, client, done) {
   var f = new FileSync(null, client);
 
   f.start(null, function(err, blockcount){
-    
+      if(err) {
+        console.log("err: ", f.currentFile-1);
+        console.log(err);
+      }
       var end = new Date().getTime();
       console.log('blockcount: %d, %s',blockcount, (end - start)/1000);
     

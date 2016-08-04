@@ -63,7 +63,7 @@ if (!dataDir) {
   // if (isWin) dataDir = '%APPDATA%\\Bitcoin\\';
   if (isWin) dataDir = 'D:\\block-bitcoin\\';
   if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Bitcoin/';
-  if (isLinux) dataDir = process.env.HOME + '/.bitcoin/';
+  if (isLinux) dataDir = process.env.HOME + '/.bitcoin/blocks/';
 }
 dataDir += network === 'testnet' ? 'testnet3' : '';
 
