@@ -2,6 +2,7 @@
 	hash character(64),
 	prevhash character(64),
 	height integer,
+	time: timestamp without time zone
 	data jsonb
 );
 

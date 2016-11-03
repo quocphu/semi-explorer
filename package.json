@@ -23,6 +23,8 @@
     "buffer-compare": "^1.1.0",
     "buffer-equals": "^1.0.3",
     "buffer-reverse": "^1.0.0",
-    "typeforce": "^1.6.2"
+    "typeforce": "^1.6.2",
+    "bitcore-lib": "^0.13.7",
+    "bitcore-p2p": "^1.1.0"
   }  
 }
